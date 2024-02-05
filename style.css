@@ -1,0 +1,65 @@
+.body {
+  background-color: rgb(248, 205, 149);
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 40px;
+}
+#hours {
+  font-size: 50px;
+}
+
+#minutes {
+  font-size: 50px;
+}
+
+#secounds {
+  font-size: 30px;
+}
+
+.start {
+  background-color: green;
+  color: white;
+  width: 80px;
+  height: 30px;
+  border: solid black 2px;
+}
+
+.interval {
+  background-color: darkgoldenrod;
+  color: white;
+  width: 80px;
+  height: 30px;
+  border: solid black 2px;
+}
+.stop {
+  background-color: red;
+  color: white;
+  width: 80px;
+  height: 30px;
+  border: solid black 2px;
+}
+.clear {
+  background-color: rgb(112, 111, 111);
+  color: white;
+  width: 80px;
+  height: 30px;
+  border: solid black 2px;
+}
+
+#savedTime {
+  height: 300px;
+  display: flex;
+}
+
+#timeStamp {
+  display: flex;
+  justify-content: center;
+}
