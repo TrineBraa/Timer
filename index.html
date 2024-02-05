@@ -10,28 +10,48 @@
     <div>
       <h1>Stopwatch</h1>
 
-      <div id="timer">
-        <span id="hours">00</span>: <span id="minutes">00</span>:
-        <span id="secounds">00</span>
-      </div>
+      <div id="stopWatch">0</div>
       <br />
       <br />
-      <button class="start" onclick="">Start</button>
-      <button class="interval" onclick="">Interval</button>
-      <button class="stop" onclick="">Stop</button>
-      <button class="clear" onclick="">Clear</button>
+      <button class="start" onclick="startTimer()">Start</button>
+      <button class="interval" onclick="giveLapTime()">Interval</button>
+      <button class="stop" onclick="pauseTimer()">Pause</button>
+      <button class="clear" onclick="clearTimer()">Clear</button>
       <br />
       <br />
       <div id="savedTime">
-        <ul id="timeStamp">
-          test
-        </ul>
+        Interval
+        <ul id="timeStamp"></ul>
       </div>
     </div>
     <script>
-      var hours = 00;
-      var minutes = 00;
-      var secounds = 00;
+      const savedTime = document.getElementById("savedTime");
+      const timeStamp = document.getElementById("timeStamp");
+      let secounds = 0;
+      var timer;
+
+      function startTimer() {
+        setInterval(countSecounds, 1000);
+      }
+
+      function countSecounds() {
+        stopWatch.innerHTML = secounds;
+        secounds++;
+      }
+
+      function giveLapTime() {
+        document.getElementById(
+          "timeStamp"
+        ).innerHTML += /*html*/ `<br/><div> ${secounds - 1} Sec</div>`;
+      }
+
+      function pauseTimer() {
+        clearInterval(timer);
+      }
+
+      function clearTimer() {
+        location.reload();
+      }
     </script>
   </body>
 </html>
