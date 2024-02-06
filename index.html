@@ -28,10 +28,10 @@
       const savedTime = document.getElementById("savedTime");
       const timeStamp = document.getElementById("timeStamp");
       let secounds = 0;
-      var timer;
+      let timer;
 
       function startTimer() {
-        setInterval(countSecounds, 1000);
+        timer = setInterval(countSecounds, 1000);
       }
 
       function countSecounds() {
